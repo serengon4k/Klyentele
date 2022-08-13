@@ -32,11 +32,27 @@ const routes = [
     }
   },
   {
-    path: '/setup/modeselection',
-    name: 'ModeSelection',
+    path: '/setup/licensekey',
+    name: 'LicenseKeyEntry',
     component: function () {
-      return import(/* webpackChunkName: "about" */ '../views/Setup/ModeSelectionView.vue')
+      return import(/* webpackChunkName: "about" */ '../views/Setup/LicenseKeyEntryView.vue')
     }
+  },
+  {
+    path: '/setup/pincreation',
+    name: 'PinCreation',
+    component: function () {
+      return import(/* webpackChunkName: "about" */ '../views/Setup/SignUpView.vue')
+    },
+    props: true
+  },
+  {
+    path: '/setup/finish',
+    name: 'SetupFinish',
+    component: function () {
+      return import(/* webpackChunkName: "about" */ '../views/Setup/SetupFinishView.vue')
+    },
+    props: true
   },
 ]
 

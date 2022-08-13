@@ -1,26 +1,30 @@
 <template>
     <div id="Container">
         <div id="Title">
-            <img alt="Vue logo" src="../../assets/AppLogo/LogoUpClose.svg"> <h1>The Legal Stuff</h1>
+            <img alt="Vue logo" src="../../assets/AppLogo/LogoUpClose.svg">
+            <h1>The Legal Stuff</h1>
         </div>
-        <section>
-
+        <section id="terms">
+            <p>In accordence with the license agreement, terms and conditions, and privacy policy found at the link:
+                <br /> https://klyentele.azura4k.com/legal.html<br />
+                By continuing forward in this setup, you agree to the installation, usage, and operation of this
+                software under the terms
+                of all three binding agreements above. If you do so agree, please look below and click the checkbox while carefully reading what it implies. Once done, click the "I agree" button if and only if, you agree.
+            </p>
         </section>
-       
-        <label for="AgreeBox"> I agree to the following terms and conditions</label>
-        <input id="AgreeBox" type="checkbox" @click="CheckBox()" ref="CheckBox">
-        <button ref="NextPageButton" @click="NextPage()" :disabled='TermsNotAgreed'>I agree</button>
+        <section id="interaction">
+            <label for="AgreeBox"> I agree to the following terms and conditions</label>
+            <input id="AgreeBox" type="checkbox" @click="CheckBox()" ref="CheckBox">
+            <br />
+            <button ref="NextPageButton" @click="NextPage()" :disabled='TermsNotAgreed'>I agree</button>
+        </section>
     </div>
 </template>
 <style scoped>
 #Container{
     text-align: center;
-    padding-top: 32px;
+    padding: 32px 15% 0px 15%;
 }
-#Title{
-    display: inline-block;
-}
-
 #Title h1{
     font-size: 48px;
     margin: 0px;
@@ -31,6 +35,20 @@
     width: 88px;
     height: auto;
     display: inline-block;
+}
+#terms{
+    text-align: left;
+    justify-self: auto;
+    margin-top: 5%;
+}
+#interaction{
+    margin-top: 10%;
+}
+#interaction label {
+    margin-right: 30px;
+}
+#interaction button {
+    margin-top: 30px;
 }
 
 </style>
@@ -56,7 +74,7 @@
                 }
             },
             NextPage(){
-                this.$router.push({name:'ModeSelection'})
+                this.$router.push({name:'LicenseKeyEntry'})
             }
         }
     }

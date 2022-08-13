@@ -2,10 +2,6 @@
     font-family: Montserrat;
     src: url("Typography/Montserrat/Montserrat-VariableFont_wght.ttf");
 }
-@font-face {
-    font-family: 'SF Fonts';
-    src: url("Typography/Montserrat/Montserrat-VariableFont_wght.ttf");
-}
 
 :root{
     --BackgroundColor: #1D1D1D;
@@ -13,6 +9,7 @@
     --ButtonLockedBackground: #004952;
     --PrimaryTextColor: #FFFFFF;
     --ButtonTextColor:  #FFFFFF;
+    --TextInputBackground: #161616;
 }
 body{
     background-color: var(--BackgroundColor);
@@ -43,10 +40,7 @@ h1, h2, h3, h4, h5, h6, p, span, a, label {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    line-height: 59px;
     /* identical to box height */
-
-
 color: var(--PrimaryTextColor);
 
 }
@@ -112,4 +106,17 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+input[type=text], input[type=password], input[type=number], input[type=email], input[type=numeric]{
+  border-radius: 24px;
+  border: none;
+  color: var(--PrimaryTextColor);
+  padding: 10px 25px;
+  background-color: var(--TextInputBackground);
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  outline: none;
+
 }
